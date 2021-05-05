@@ -1,0 +1,526 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 97%);
+    font-family: 'Commissioner', sans-serif;
+    font-size: 16px;
+}
+
+/* hidden things */
+.hide {
+    display: none;
+}
+
+/* hidden things in mobile view */
+#hero-desktop {
+    display: none;
+}
+
+/* general frames sections */
+.mother-section {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+p {
+    color: hsl(0, 0%, 48%);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 15px;
+}
+
+.sections {
+    border: 1px solid hsl(0, 2%, 89%);
+    border-radius: 10px;
+    background-color: white;
+    margin: 30px 0;
+    padding: 20px 0;
+}
+
+button {
+    border: none;
+    border-radius: 25px;
+    background-color: hsl(176, 50%, 47%);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    height: 50px;
+    outline: none;
+}
+
+button:active {
+    background-color: hsl(176, 72%, 28%);
+}
+
+/************* bg. images, logo, nav bar + ul, hamburger + lines ********/
+.background-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+}
+
+.background-image #hero-mobile {
+    min-width: 320px;
+    max-width: 610px;
+    width: 100%;
+}
+
+.logo {
+    margin: 30px 0 0 30px;
+}
+
+.navigation-icon {
+    margin: -23px 0 10px 0;
+}
+
+.hamburger-menu {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 20px;
+    height: 25px;
+    margin: 0 30px 0 auto;
+}
+
+.line {
+    border-radius: 1px;
+    width: 100%;
+    height: 3.2px;
+    background-color: white;
+}
+
+.change .line-1 {
+    transform: rotate(45deg) translate(7px, 5px);
+}
+
+.change .line-2 {
+    opacity: 0;
+}
+
+.change .line-3 {
+    transform: rotate(-45deg) translate(7px, -5px);
+}
+
+.nav-items {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    line-height: 3;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    width: 300px;
+}
+
+.change .nav-items {
+    opacity: 1;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+hr {
+    width: 99%;
+    position: relative;
+    border: 1.5px solid hsla(0, 0%, 48%, 0.5);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+/*********** first section *************/
+.first-section {
+    margin-top: 11rem;
+    padding-top: 0;
+}
+
+#mastercraft {
+    margin-top: -30px;
+}
+
+.first-section .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 15px;
+}
+
+.first-section button {
+    width: 200px;
+}
+
+#bookMark {
+    height: 50px;
+    border-radius: 25px;
+}
+
+/* book mark function */
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked~label #bookMark {
+    filter: brightness(265%) sepia(100%) hue-rotate(120deg) saturate(300%) contrast(0.8);
+}
+
+/************** second section ************/
+.second-section {
+    line-height: 0.8;
+}
+
+.numbers hr {
+    width: 100px;
+}
+
+/* second-section graph-bar*/
+.bar {
+    height: 15px;
+    width: 90%;
+    overflow-y: hidden;
+    border-radius: 10px;
+    margin: 0 auto 10px auto;
+    padding: 0 0 0 10px;
+    position: relative;
+}
+
+.bar::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 15px;
+    top: 0;
+    background: #ecf0f1;
+}
+
+.bar::after {
+    content: '';
+    background: hsl(176, 50%, 47%);
+    border-radius: 10px;
+    height: 15px;
+    transition: 0.7s;
+    display: block;
+    width: 100%;
+    -webkit-animation: bar-before 1 1.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@-webkit-keyframes bar-before {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.bar1::after {
+    max-width: 75%;
+}
+
+/*********** third section **********/
+.third-section {
+    text-align: left;
+    padding: 20px 20px;
+}
+
+.third-section p {
+    padding-left: 0;
+    line-height: 1.6;
+    font-size: 12px;
+}
+
+/* main page bamboo-stand  */
+.sub-section {
+    border: 1px solid hsl(0, 0%, 77%);
+    border-radius: 10px;
+    margin: 25px 0;
+    padding: 0 15px 20px;
+
+}
+
+.header h5 {
+    color: hsl(176, 50%, 47%);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sub-section button {
+    width: 150px;
+    height: 45px;
+}
+
+/***** Selection modal start **********/
+.modal {
+    background-color: rgba(14, 12, 12, 0.5);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding: 15rem 0 55rem;
+}
+#blur-bg {
+    display: none;
+}
+.selection-bar {
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px 20px;
+}
+
+.selection-bar p {
+    padding-left: 0;
+    line-height: 1.6;
+    font-size: 12px;
+}
+
+/** w3school method: custom input button **/
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 2px solid rgba(190, 189, 189, 0.5);
+    border-radius: 25px;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: hsl(176, 50%, 47%);
+}
+/* style text radio button */
+#pledge-no-reward .container .checkmark {
+    top: -2px;
+}
+.container p {
+    color: hsl(176, 50%, 47%);
+    margin-top: 0;
+}
+/* selected pledge in modal */
+.selected-pledge {
+    display: none;
+}
+.shown {
+    display: block;
+}
+.pledge__btn {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 10px;
+}
+.pledge__btn p {
+    width: 100%;
+    text-align: center;
+}
+.pledge__btn button {
+    max-width: 100px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.pledge__btn .bg-white {
+    color: black;
+    background-color: white;
+    border: 1px solid hsl(0, 0%, 77%);
+}
+.pledge__btn .bg-white var {
+    font-style: normal;
+    color: hsl(0, 0%, 77%);
+    font-weight: 500;
+    margin-right: 10px;
+}
+.pledge__btn .bg-white:active {
+    background-color: rgb(190, 189, 189);
+}
+/******** Success modal start ********/
+#success {
+    display: none;
+    padding-bottom: 128.3rem;
+}
+.success-bar button {
+    width: 150px;
+}
+/* viewport 650px< */
+@media (min-width: 610px) {
+
+    /* general frames sections */
+    .mother-section {
+        width: 550px;
+    }
+
+    .flex-desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* bg. images, logo, nav bar + ul, hamburger + lines */
+    #hero-mobile {
+        display: none;
+    }
+
+    .hide {
+        display: block;
+        width: 100%;
+    }
+
+    .logo {
+        width: 129px;
+        margin-left: 80px;
+    }
+
+    .nav-bar {
+        margin: -35px 80px 0 auto;
+        color: white;
+        width: 500px;
+    }
+
+    .navigation-icon {
+        display: none;
+    }
+
+    .nav-items {
+        all: unset;
+    }
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    li {
+        width: 90px;
+    }
+
+    .nav-items hr {
+        display: none;
+    }
+
+    /*********** first section *************/
+
+    .buttons label {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        background-color: gray;
+        border-radius: 25px;
+        width: 200px;
+        color: white;
+        font-weight: 700;
+    }
+
+    input[type=checkbox]:checked~label {
+        background-color: hsl(176, 50%, 47%);
+    }
+
+    /*********** second section *********/
+    .second-section .numbers {
+        margin: 0 30px 10px;
+    }
+
+    .second-section hr {
+        display: block;
+        transform: rotate(90deg);
+        width: 50px;
+        height: 0;
+        margin: 0;
+    }
+
+    /*********** modal section *********/
+    .modal {
+        padding-bottom: 30rem;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .container p {
+        margin: 0 0 0 auto;
+    }
+
+    .checkmark {
+        top: -2px;
+    }
+    /* selected pledge modal section */
+
+    .selected-pledge hr {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .pledge__btn {
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+    .pledge__btn p {
+        text-align: left;
+    }
+    /*********** success section *********/
+    #success {
+        padding-bottom: 78rem;
+    }
+}
